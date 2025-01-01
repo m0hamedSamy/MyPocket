@@ -1,22 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.example.mypocket"
+    namespace = "com.example.mypocket.dashboard"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mypocket"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -35,17 +30,13 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
     // Modules
-    implementation(project(":dashboard"))
-
-    // Google Fonts
-    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(project(":dashboard:data"))
+    implementation(project(":dashboard:domain"))
+    implementation(project(":dashboard:presentation"))
 
     // Compose Material 3
     implementation(libs.androidx.material3)

@@ -21,6 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyPocket"
 include(":app")
-include(":data")
-include(":domain")
-include(":presentation")
+include(":dashboard")
+include(":dashboard:data")
+include(":dashboard:domain")
+include(":dashboard:presentation")
