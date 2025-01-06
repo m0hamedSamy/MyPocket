@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -37,6 +39,7 @@ dependencies {
     implementation(project(":dashboard:data"))
     implementation(project(":dashboard:domain"))
     implementation(project(":dashboard:presentation"))
+    implementation(project(":core"))
 
     // Compose Material 3
     implementation(libs.androidx.material3)

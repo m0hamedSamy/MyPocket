@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bottom_nav_btn_home">Home</string>
+    <string name="bottom_nav_btn_reports">Reports</string>
+    <string name="bottom_nav_btn_settings">Settings</string>
+</resources>
