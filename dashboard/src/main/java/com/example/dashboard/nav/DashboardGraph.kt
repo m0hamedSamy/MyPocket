@@ -7,6 +7,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.core.component.appBar.AppBar
+import com.example.core.component.appBar.AppBarStyle
 import com.example.core.component.bottomNavBar.BottomNavBar
 import kotlinx.serialization.Serializable
 
@@ -23,6 +25,9 @@ fun DashboardGraph() {
     )
 
     Scaffold(
+        topBar = {
+            AppBar(appBarStyle = AppBarStyle.DashboardAppBar())
+        },
         bottomBar = {
             BottomNavBar(
                 navController = navController,
